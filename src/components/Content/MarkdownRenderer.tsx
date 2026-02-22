@@ -26,8 +26,6 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
   };
 
   return (
-    <div className="prose prose-lg max-w-none">
-      <ReactMarkdown components={components}>{content}</ReactMarkdown>
-    </div>
+    <ReactMarkdown components={components}>{content}</ReactMarkdown>
   );
 }

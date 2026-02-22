@@ -83,15 +83,15 @@ export default function DSATutorial() {
   }));
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors">
       <div className="flex">
         <Sidebar items={sidebarItems} title="DSA Topics" />
         <main className="flex-1 lg:ml-64">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
-            <div className="bg-white rounded-lg shadow-sm p-4 sm:p-8 mb-8">
+          <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 py-8 lg:py-12">
+            <article className="prose prose-lg dark:prose-invert max-w-none">
               <MarkdownRenderer content={content} />
-            </div>
-            <div className="hidden xl:block sticky top-20">
+            </article>
+            <div className="hidden xl:block sticky top-20 mt-12">
               <TableOfContents content={content} />
             </div>
           </div>

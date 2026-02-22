@@ -1,6 +1,7 @@
 // Use Vite's import.meta.glob to load markdown files
 const markdownModules = import.meta.glob('/src/content/**/*.md', { 
-  as: 'raw',
+  query: '?raw',
+  import: 'default',
   eager: false 
 });
 

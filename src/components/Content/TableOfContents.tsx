@@ -74,9 +74,9 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
   };
 
   return (
-    <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-      <h3 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">
-        Table of Contents
+    <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-gray-800 transition-colors">
+      <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wider">
+        On this page
       </h3>
       <nav className="space-y-1">
         {headings.map((heading) => {
@@ -86,11 +86,11 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
               key={heading.id}
               onClick={() => scrollToHeading(heading.id)}
               className={`
-                block w-full text-left text-sm py-1 px-2 rounded transition-colors
+                block w-full text-left text-sm py-1.5 px-2 rounded transition-colors
                 ${
                   activeId === heading.id
-                    ? 'bg-blue-100 text-blue-700 font-medium'
-                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                    ? 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white font-medium'
+                    : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
                 }
               `}
               style={{ paddingLeft }}

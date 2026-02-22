@@ -56,15 +56,15 @@ export default function Sidebar({ items, title }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={`
-          fixed lg:sticky top-16 lg:top-0 left-0 h-[calc(100vh-4rem)] lg:h-screen
-          w-64 bg-white border-r border-gray-200 z-30
+          fixed lg:sticky top-14 lg:top-0 left-0 h-[calc(100vh-3.5rem)] lg:h-screen
+          w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 z-30
           transform transition-transform duration-300 ease-in-out
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
           overflow-y-auto
         `}
       >
-        <div className="p-4">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">{title}</h2>
+        <div className="p-6">
+          <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">{title}</h2>
           <nav className="space-y-1">
             {sortedItems.map((item) => {
               const isActive = location.pathname === item.path;
@@ -73,11 +73,11 @@ export default function Sidebar({ items, title }: SidebarProps) {
                   key={item.path}
                   to={item.path}
                   className={`
-                    block px-3 py-2 rounded-md text-sm font-medium transition-colors
+                    block px-3 py-2 rounded-md text-sm transition-colors
                     ${
                       isActive
-                        ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-600'
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600'
+                        ? 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-medium'
+                        : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
                     }
                   `}
                   onClick={() => setIsOpen(false)}

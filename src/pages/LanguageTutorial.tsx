@@ -21,34 +21,39 @@ export default function LanguageTutorial() {
 
       try {
         if (!lang) {
-        // Show language list
-        setContent('');
+          // Show language list
+          setContent('');
+          setLoading(false);
+          return;
+        }
+
+        const items = getContentByCategory('languages', lang);
+        
+        if (!topic && items.length > 0) {
+          // Redirect to first topic if no topic specified
+          navigate(`/languages/${lang}/${items[0].metadata.topic}`, { replace: true });
+          return;
+        }
+
+        const contentItem = topic
+          ? items.find((item) => item.metadata.topic === topic)
+          : items[0];
+
+        if (!contentItem) {
+          setError('Content not found');
+          setLoading(false);
+          return;
+        }
+
+        // Load markdown content
+        const markdownContent = await loadMarkdown(contentItem.path);
+        setContent(markdownContent);
         setLoading(false);
-        return;
-      }
-
-      const items = getContentByCategory('languages', lang);
-      
-      if (!topic && items.length > 0) {
-        // Redirect to first topic if no topic specified
-        navigate(`/languages/${lang}/${items[0].metadata.topic}`, { replace: true });
-        return;
-      }
-
-      const contentItem = topic
-        ? items.find((item) => item.metadata.topic === topic)
-        : items[0];
-
-      if (!contentItem) {
-        setError('Content not found');
+      } catch (err) {
+        setError('Failed to load content');
         setLoading(false);
-        return;
+        console.error('Error loading content:', err);
       }
-
-      // Load markdown content
-      const markdownContent = await loadMarkdown(contentItem.path);
-      setContent(markdownContent);
-      setLoading(false);
     };
 
     loadContent();
@@ -60,9 +65,9 @@ export default function LanguageTutorial() {
     // Show language selection
     const languages = ['java', 'python'];
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-bold mb-8 text-gray-900">Programming Languages</h1>
+          <h1 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">Programming Languages</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {languages.map((language) => {
               const items = getContentByCategory('languages', language);
@@ -70,12 +75,12 @@ export default function LanguageTutorial() {
                 <Link
                   key={language}
                   to={`/languages/${language}`}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-blue-500"
+                  className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400"
                 >
-                  <h2 className="text-2xl font-semibold mb-2 text-gray-900 capitalize">
+                  <h2 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-white capitalize">
                     {language}
                   </h2>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-300">
                     {items.length} tutorial{items.length !== 1 ? 's' : ''} available
                   </p>
                 </Link>
@@ -118,15 +123,15 @@ export default function LanguageTutorial() {
   }));
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors">
       <div className="flex">
         <Sidebar items={sidebarItems} title={lang.toUpperCase()} />
         <main className="flex-1 lg:ml-64">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
-            <div className="bg-white rounded-lg shadow-sm p-4 sm:p-8 mb-8">
+          <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 py-8 lg:py-12">
+            <article className="prose prose-lg dark:prose-invert max-w-none">
               <MarkdownRenderer content={content} />
-            </div>
-            <div className="hidden xl:block sticky top-20">
+            </article>
+            <div className="hidden xl:block sticky top-20 mt-12">
               <TableOfContents content={content} />
             </div>
           </div>
