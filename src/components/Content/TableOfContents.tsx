@@ -74,8 +74,8 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
   };
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-gray-800 transition-colors">
-      <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wider">
+    <div className="bg-gray-50 dark:bg-[#161b22] rounded-lg p-4 border border-gray-200 dark:border-[#30363d] transition-colors">
+      <h3 className="text-xs font-semibold text-gray-500 dark:text-[#8b949e] mb-3 uppercase tracking-wider">
         On this page
       </h3>
       <nav className="space-y-1">
@@ -89,8 +89,8 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
                 block w-full text-left text-sm py-1.5 px-2 rounded transition-colors
                 ${
                   activeId === heading.id
-                    ? 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white font-medium'
-                    : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
+                    ? 'bg-gray-200 dark:bg-[#1f6feb]/20 text-gray-900 dark:text-[#58a6ff] font-medium'
+                    : 'text-gray-600 dark:text-[#8b949e] hover:bg-gray-100 dark:hover:bg-[#21262d] hover:text-gray-900 dark:hover:text-[#c9d1d9]'
                 }
               `}
               style={{ paddingLeft }}

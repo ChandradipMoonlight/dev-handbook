@@ -122,15 +122,15 @@ export default function LanguageTutorial() {
   }));
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors">
+    <div className="min-h-screen bg-white dark:bg-[#0d1117] transition-colors">
       <div className="flex">
         <Sidebar items={sidebarItems} title={lang.toUpperCase()} />
-        <main className="flex-1 lg:ml-64">
-          <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 py-8 lg:py-12">
+        <main className="flex-1 lg:ml-56">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-10 py-8 lg:py-12">
             <article className="prose prose-lg dark:prose-invert max-w-none">
               <MarkdownRenderer content={content} />
             </article>
-            <div className="hidden xl:block sticky top-20 mt-12">
+            <div className="hidden xl:block sticky top-20 mt-8">
               <TableOfContents content={content} />
             </div>
           </div>

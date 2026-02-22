@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-950">
+    <div className="min-h-screen bg-white dark:bg-[#0d1117]">
       {/* Hero Section */}
       <section className="border-b border-gray-200 dark:border-gray-800 py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
