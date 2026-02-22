@@ -8,17 +8,19 @@ interface MarkdownRendererProps {
 
 export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
   const components: Components = {
-    code({ node, inline, className, children, ...props }) {
+    code(props) {
+      const { className, children, ...rest } = props;
       const match = /language-(\w+)/.exec(className || '');
       const language = match ? match[1] : '';
       const codeString = String(children).replace(/\n$/, '');
+      const inline = !className || !match;
 
       if (!inline && language) {
         return <CodeBlock language={language} code={codeString} />;
       }
 
       return (
-        <code className={className} {...props}>
+        <code className={className} {...rest}>
           {children}
         </code>
       );

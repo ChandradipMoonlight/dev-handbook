@@ -1,11 +1,10 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { getContentByCategory, getContentByPath } from '@/utils/contentIndex';
+import { getContentByCategory } from '@/utils/contentIndex';
 import { loadMarkdown } from '@/utils/markdownLoader';
 import MarkdownRenderer from '@/components/Content/MarkdownRenderer';
 import TableOfContents from '@/components/Content/TableOfContents';
 import Sidebar from '@/components/Layout/Sidebar';
-import type { ContentItem } from '@/types/content';
 
 export default function LanguageTutorial() {
   const { lang, topic } = useParams<{ lang?: string; topic?: string }>();
