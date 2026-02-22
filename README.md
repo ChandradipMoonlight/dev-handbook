@@ -100,6 +100,48 @@ dev-handbook/
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
 
+## Deployment to GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+### Setup Instructions
+
+1. **Create a GitHub repository** (if you haven't already):
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/dev-handbook.git
+   git push -u origin main
+   ```
+
+2. **Enable GitHub Pages**:
+   - Go to your repository on GitHub
+   - Navigate to **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - Save the settings
+
+3. **Automatic Deployment**:
+   - The workflow will automatically deploy when you push to the `main` branch
+   - Your site will be available at: `https://YOUR_USERNAME.github.io/dev-handbook/`
+
+### Manual Deployment
+
+If you want to deploy manually:
+
+```bash
+npm run build:gh-pages
+```
+
+Then push the `dist` folder to the `gh-pages` branch (though the GitHub Actions workflow handles this automatically).
+
+### Custom Domain
+
+If you want to use a custom domain:
+1. Add a `CNAME` file in the `public` folder with your domain name
+2. Configure your DNS settings as per GitHub Pages documentation
+
 ## License
 
 MIT
