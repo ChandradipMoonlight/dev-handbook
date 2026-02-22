@@ -16,10 +16,10 @@ export default function Home() {
               Dev Handbook
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-700 dark:text-[#c9d1d9]">
-              Master Java, LLD, and System Design in Simple Language
+            Learn programming concepts in simple English with real-world examples
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-[#8b949e] mb-10 max-w-2xl mx-auto leading-relaxed">
-              Your comprehensive guide to mastering programming fundamentals, low-level design patterns, and high-level system architecture with clear explanations and real-world examples.
+            Your comprehensive guide to mastering programming languages, data structures, system design, and interview preparation with clear explanations and real-world examples.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
@@ -41,64 +41,83 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2️⃣ Features Section - 3 Premium Cards */}
+      {/* 2️⃣ Features Section - 4 Premium Cards */}
       <section className="py-24 border-b border-gray-200 dark:border-[#30363d]">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Java Fundamentals Card */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Programming Languages Card */}
             <Link
               to="/languages"
               className="group p-8 bg-white dark:bg-[#161b22] rounded-2xl border border-gray-200 dark:border-[#30363d] hover:border-indigo-300 dark:hover:border-indigo-700 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-100 dark:hover:shadow-indigo-900/20 hover:-translate-y-1 hover:scale-[1.02]"
             >
               <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-xl bg-indigo-100 dark:bg-indigo-900/30 group-hover:bg-indigo-200 dark:group-hover:bg-indigo-900/50 transition-colors duration-300">
-                <span className="text-2xl">☕</span>
+                <span className="text-2xl">💻</span>
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-[#e6edf3]">
-                Java Fundamentals
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-[#e6edf3]">
+                Programming Languages
               </h3>
-              <p className="text-gray-600 dark:text-[#8b949e] leading-relaxed mb-4">
-                Master core Java concepts, OOP principles, collections, and advanced features with practical examples and clear explanations.
+              <p className="text-sm text-gray-600 dark:text-[#8b949e] leading-relaxed mb-4">
+                Learn Java, Python, and more with simple explanations and real-world examples.
               </p>
               <span className="text-indigo-600 dark:text-indigo-400 font-medium text-sm group-hover:underline inline-flex items-center">
-                Explore Java →
+                Explore →
               </span>
             </Link>
 
-            {/* Low Level Design Card */}
+            {/* Data Structures & Algorithms Card */}
             <Link
               to="/dsa"
               className="group p-8 bg-white dark:bg-[#161b22] rounded-2xl border border-gray-200 dark:border-[#30363d] hover:border-purple-300 dark:hover:border-purple-700 transition-all duration-300 hover:shadow-xl hover:shadow-purple-100 dark:hover:shadow-purple-900/20 hover:-translate-y-1 hover:scale-[1.02]"
             >
               <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-xl bg-purple-100 dark:bg-purple-900/30 group-hover:bg-purple-200 dark:group-hover:bg-purple-900/50 transition-colors duration-300">
-                <span className="text-2xl">🏗️</span>
+                <span className="text-2xl">📊</span>
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-[#e6edf3]">
-                Low Level Design
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-[#e6edf3]">
+                Data Structures & Algorithms
               </h3>
-              <p className="text-gray-600 dark:text-[#8b949e] leading-relaxed mb-4">
-                Learn design patterns, SOLID principles, and object-oriented design with hands-on examples and best practices.
+              <p className="text-sm text-gray-600 dark:text-[#8b949e] leading-relaxed mb-4">
+                Master arrays, linked lists, trees, and algorithms with clear explanations.
               </p>
               <span className="text-purple-600 dark:text-purple-400 font-medium text-sm group-hover:underline inline-flex items-center">
-                Explore LLD →
+                Explore →
               </span>
             </Link>
 
-            {/* High Level Design Card */}
+            {/* System Design Card */}
             <Link
               to="/system-design"
               className="group p-8 bg-white dark:bg-[#161b22] rounded-2xl border border-gray-200 dark:border-[#30363d] hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100 dark:hover:shadow-blue-900/20 hover:-translate-y-1 hover:scale-[1.02]"
             >
               <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-xl bg-blue-100 dark:bg-blue-900/30 group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors duration-300">
-                <span className="text-2xl">🌐</span>
+                <span className="text-2xl">🏗️</span>
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-[#e6edf3]">
-                High Level Design
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-[#e6edf3]">
+                System Design
               </h3>
-              <p className="text-gray-600 dark:text-[#8b949e] leading-relaxed mb-4">
-                Design scalable, distributed systems. Learn microservices, databases, caching, load balancing, and system architecture.
+              <p className="text-sm text-gray-600 dark:text-[#8b949e] leading-relaxed mb-4">
+                Learn to design scalable systems and understand architecture patterns.
               </p>
               <span className="text-blue-600 dark:text-blue-400 font-medium text-sm group-hover:underline inline-flex items-center">
-                Explore HLD →
+                Explore →
+              </span>
+            </Link>
+
+            {/* Interview Preparation Card */}
+            <Link
+              to="/interview"
+              className="group p-8 bg-white dark:bg-[#161b22] rounded-2xl border border-gray-200 dark:border-[#30363d] hover:border-green-300 dark:hover:border-green-700 transition-all duration-300 hover:shadow-xl hover:shadow-green-100 dark:hover:shadow-green-900/20 hover:-translate-y-1 hover:scale-[1.02]"
+            >
+              <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-xl bg-green-100 dark:bg-green-900/30 group-hover:bg-green-200 dark:group-hover:bg-green-900/50 transition-colors duration-300">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-[#e6edf3]">
+                Interview Preparation
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-[#8b949e] leading-relaxed mb-4">
+                Prepare for technical interviews with common questions and solutions.
+              </p>
+              <span className="text-green-600 dark:text-green-400 font-medium text-sm group-hover:underline inline-flex items-center">
+                Explore →
               </span>
             </Link>
           </div>
