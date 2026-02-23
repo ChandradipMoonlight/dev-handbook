@@ -4,6 +4,7 @@ export interface ContentMetadata {
   category: 'languages' | 'dsa' | 'system-design' | 'interview';
   language?: string;
   topic?: string;
+  folder?: string;
   order?: number;
 }
 
