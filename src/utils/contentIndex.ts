@@ -238,6 +238,66 @@ export const contentIndex: ContentIndex = {
       },
       content: '',
     },
+    {
+      path: '/src/content/dsa/twoPointer/introduction.md',
+      metadata: {
+        title: 'Two Pointer Technique - Introduction',
+        description: 'Learn the two pointer technique and when to use it',
+        category: 'dsa',
+        topic: 'two-pointer-introduction',
+        folder: 'Two Pointer Technique',
+        order: 3,
+      },
+      content: '',
+    },
+    {
+      path: '/src/content/dsa/twoPointer/two-sum.md',
+      metadata: {
+        title: 'Two Sum',
+        description: 'Find two numbers that add up to target using two pointers',
+        category: 'dsa',
+        topic: 'two-sum',
+        folder: 'Two Pointer Technique',
+        order: 4,
+      },
+      content: '',
+    },
+    {
+      path: '/src/content/dsa/twoPointer/three-sum.md',
+      metadata: {
+        title: 'Three Sum',
+        description: 'Find all triplets that sum to zero using two pointers',
+        category: 'dsa',
+        topic: 'three-sum',
+        folder: 'Two Pointer Technique',
+        order: 5,
+      },
+      content: '',
+    },
+    {
+      path: '/src/content/dsa/twoPointer/container-with-most-water.md',
+      metadata: {
+        title: 'Container With Most Water',
+        description: 'Find maximum water container area using two pointers',
+        category: 'dsa',
+        topic: 'container-with-most-water',
+        folder: 'Two Pointer Technique',
+        order: 6,
+      },
+      content: '',
+    },
+    {
+      path: '/src/content/dsa/twoPointer/remove-duplicates.md',
+      metadata: {
+        title: 'Remove Duplicates from Sorted Array',
+        description: 'Remove duplicates in-place using two pointers',
+        category: 'dsa',
+        topic: 'remove-duplicates',
+        folder: 'Two Pointer Technique',
+        order: 7,
+      },
+      content: '',
+    },
   ],
   systemDesign: [
     {
