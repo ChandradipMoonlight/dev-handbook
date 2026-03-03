@@ -83,6 +83,7 @@ export default function SystemDesign() {
   const sidebarItems = systemDesignItems.map((item) => ({
     title: item.metadata.title,
     path: `/system-design/${item.metadata.topic}`,
+    folder: item.metadata.folder,
     order: item.metadata.order,
   }));
 

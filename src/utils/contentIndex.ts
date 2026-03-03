@@ -311,6 +311,66 @@ export const contentIndex: ContentIndex = {
       },
       content: '',
     },
+    {
+      path: '/src/content/system-design/HLD/messaging-queue/phase-1-messaging-foundations.md',
+      metadata: {
+        title: 'Phase 1: Messaging Foundations',
+        description: 'Distributed systems basics and messaging core concepts',
+        category: 'system-design',
+        topic: 'phase-1-messaging-foundations',
+        folder: 'Messaging Queue',
+        order: 2,
+      },
+      content: '',
+    },
+    {
+      path: '/src/content/system-design/HLD/messaging-queue/phase-2-rabbitmq-mastery.md',
+      metadata: {
+        title: 'Phase 2: RabbitMQ Mastery',
+        description: 'Queue-based messaging expert - RabbitMQ architecture, exchanges, reliability, and HA',
+        category: 'system-design',
+        topic: 'phase-2-rabbitmq-mastery',
+        folder: 'Messaging Queue',
+        order: 3,
+      },
+      content: '',
+    },
+    {
+      path: '/src/content/system-design/HLD/messaging-queue/phase-3-kafka-mastery.md',
+      metadata: {
+        title: 'Phase 3: Kafka Mastery',
+        description: 'Streaming expert - Kafka core, internals, performance, Connect & Streams',
+        category: 'system-design',
+        topic: 'phase-3-kafka-mastery',
+        folder: 'Messaging Queue',
+        order: 4,
+      },
+      content: '',
+    },
+    {
+      path: '/src/content/system-design/HLD/messaging-queue/phase-4-industrial-messaging.md',
+      metadata: {
+        title: 'Phase 4: Industrial Messaging',
+        description: 'MQTT, OPC-UA, and Edge Gateway architecture for industrial systems',
+        category: 'system-design',
+        topic: 'phase-4-industrial-messaging',
+        folder: 'Messaging Queue',
+        order: 5,
+      },
+      content: '',
+    },
+    {
+      path: '/src/content/system-design/HLD/messaging-queue/phase-5-platform-engineering.md',
+      metadata: {
+        title: 'Phase 5: Platform Engineering',
+        description: 'Lead level - Decision framework, event backbone, observability, HA/DR, and security',
+        category: 'system-design',
+        topic: 'phase-5-platform-engineering',
+        folder: 'Messaging Queue',
+        order: 6,
+      },
+      content: '',
+    },
   ],
   interview: [
     {
